@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Gracias por tu compra! | LautaVFX</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="navbar scrolled">
+    <a href="index.html" class="logo">Lauta<span>VFX</span></a>
+    <nav><a href="index.html">Volver al inicio</a></nav>
+  </header>
+
+  <main class="thanks">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="thanks-box">
+      <div class="check">✓</div>
+      <h1>¡Gracias por tu <span class="gradient-text">compra</span>!</h1>
+      <p class="hero-sub" style="margin:1rem auto 0;">Para arrancar tu proyecto, seguí estos 3 pasos:</p>
+
+      <ol class="steps">
+        <li>
+          <strong>Enviame el comprobante por DM</strong><br>
+          Mandalo a Instagram <strong>@lautavfx</strong>. Sin el comprobante no puedo confirmar tu pago.<br>
+          <a class="btn" href="https://ig.me/m/lautavfx" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i> Enviar por DM
+          </a>
+        </li>
+        <li>
+          <strong>Completá el brief</strong><br>
+          Contame el estilo, las referencias y lo que tengas en mente, acá abajo.
+        </li>
+        <li>
+          <strong>Charlamos y arrancamos</strong><br>
+          Te escribo para definir la dirección creativa y ponerle fecha de entrega.
+        </li>
+      </ol>
+
+      <form class="brief-form" data-form action="https://formspree.io/f/TU_ID_ACA" method="POST">
+        <h2>Brief del proyecto</h2>
+
+        <div class="brief-row">
+          <label>Nombre
+            <input type="text" name="nombre" required>
+          </label>
+          <label>Instagram o email
+            <input type="text" name="contacto" required>
+          </label>
+        </div>
+
+        <label>Plan que compraste
+          <select name="plan" required>
+            <option value="" disabled selected>Elegí tu plan</option>
+            <option>VFX Básico (hasta 1 min)</option>
+            <option>VFX Estándar (hasta 2 min)</option>
+            <option>VFX Pro (hasta 3 min)</option>
+            <option>Mix</option>
+            <option>Master</option>
+            <option>Pack Mix + Master</option>
+          </select>
+        </label>
+
+        <label>Idea y estilo al que querés llegar
+          <textarea name="idea" rows="4" required></textarea>
+        </label>
+
+        <label>Referencias (links de videos, tracks, imágenes)
+          <textarea name="referencias" rows="3"></textarea>
+        </label>
+
+        <label>Link a tus archivos (clips o pistas, en Drive, WeTransfer, etc.)
+          <input type="text" name="archivos">
+        </label>
+
+        <label>Fecha deseada de entrega (si tenés una)
+          <input type="text" name="fecha" placeholder="Ej: antes del 30 de noviembre">
+        </label>
+
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+        <button class="btn" type="submit">Enviar brief</button>
+        <p class="form-status" role="status"></p>
+      </form>
+
+      <div class="socials" style="justify-content:center; margin-top:2rem;">
+        <a href="https://instagram.com/lautavfx" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/forms.js"></script>
+</body>
+</html>

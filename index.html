@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LautaVFX | VFX, edición y audio</title>
+  <meta name="description" content="Servicios de VFX, edición de video, mezcla y masterización.">
+  <link rel="icon" href="assets/favicon/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#05060a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Pantalla de carga -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo">Lauta<span>VFX</span></div>
+    <div class="preloader-bar"><div></div></div>
+  </div>
+
+  <div class="progress" id="progress"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="navbar" id="navbar">
+    <a href="#inicio" class="logo">Lauta<span>VFX</span></a>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#musica">Música</a>
+      <a href="#planes">Planes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <canvas id="particles"></canvas>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <p class="eyebrow">After Effects · VFX · FL Studio · Mix & Master</p>
+      <h1>Tu Creatividad la hago <span class="gradient-text">Realidad.</span></h1>
+      <p class="hero-sub">Soy LautaVFX y hago <strong id="typed"></strong><span class="caret"></span></p>
+      <div class="hero-actions">
+        <a href="#planes" class="btn magnetic">Ver planes</a>
+        <button class="btn btn-ghost magnetic" data-modal="modal-reel">▶ Ver reel</button>
+      </div>
+    </section>
+
+    <!-- Cartel deslizante -->
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>VFX</span><span>EDICIÓN</span><span>MEZCLA</span><span>MASTERING</span><span>MOTION</span><span>COMPOSICIÓN</span>
+        <span>VFX</span><span>EDICIÓN</span><span>MEZCLA</span><span>MASTERING</span><span>MOTION</span><span>COMPOSICIÓN</span>
+      </div>
+    </div>
+
+    <section id="portfolio" class="reveal">
+      <h2>Portfolio</h2>
+      <p class="section-sub">Algunos de mis trabajos. Pasá el mouse y hacé clic para verlos.</p>
+      <div class="cards">
+        <div class="card tilt" data-modal="modal-reel">
+          <div class="play">▶</div>
+          <div class="card-info"><h3>Proyecto 01</h3><p>VFX · Videoclip</p></div>
+        </div>
+        <div class="card tilt" data-modal="modal-reel">
+          <div class="play">▶</div>
+          <div class="card-info"><h3>Proyecto 02</h3><p>Edición + VFX</p></div>
+        </div>
+        <div class="card tilt" data-modal="modal-reel">
+          <div class="play">▶</div>
+          <div class="card-info"><h3>Proyecto 03</h3><p>Motion graphics</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="musica" class="reveal">
+  <h2>Música</h2>
+  <p class="section-sub">Mezcla y masterización. Escuchá la diferencia entre el track original y el trabajo final.</p>
+
+  <h3 class="plans-title">Antes y después</h3>
+  <div class="ab-player" id="abPlayer">
+    <div class="ab-head">
+      <div>
+        <h4 id="abTitle">Título del track</h4>
+        <p id="abArtist"></p>
+      </div>
+      <div class="ab-tracks" id="abTracks"></div>
+    </div>
+
+    <div class="eq" id="eq"></div>
+
+    <div class="ab-switch" id="abSwitch">
+      <button class="active" data-mode="before">Antes · sin mezclar</button>
+      <button data-mode="after">Después · mix + master</button>
+    </div>
+
+    <div class="ab-controls">
+      <button id="abPlay" aria-label="Reproducir / pausar">▶</button>
+      <input type="range" id="abSeek" min="0" max="100" value="0" step="0.1" aria-label="Posición">
+      <span id="abTime">0:00 / 0:00</span>
+    </div>
+    <p class="ab-status" id="abStatus"></p>
+  </div>
+
+  <h3 class="plans-title">Tracks que mezclé y masterizé</h3>
+  <div class="spotify-wrap" id="spotifyBox"></div>
+</section>
+
+      <section id="planes" class="reveal">
+  <h2>Planes</h2>
+  <p class="section-sub">Elegí tu plan y pagá. Después charlamos la dirección creativa (estilo, referencias, etc.) y arranca el proyecto.</p>
+
+  <div class="currency-toggle" id="currencyToggle">
+    <button class="active" data-cur="ARS">ARS $</button>
+    <button data-cur="USD">USD US$</button>
+  </div>
+
+  <h3 class="plans-title">VFX y edición de video</h3>
+  <div class="plans" id="plans-vfx"></div>
+
+  <h3 class="plans-title">Mezcla y masterización</h3>
+  <div class="plans" id="plans-audio"></div>
+
+  <div class="terms">
+    <h3>Preguntas Frecuentes</h3>
+    <ul>
+      <li><strong>Revisiones:</strong> cada plan incluye hasta 3. Cuentan como revisión los ajustes dentro de la dirección acordada. Cambiar la idea o el estilo una vez avanzado el proyecto no.</li>
+      <li><strong>Material:</strong> el cliente aporta los clips o las pistas, y es responsable de tener los derechos sobre ese material.</li>
+      <li><strong>Entrega:</strong> video en MP4 (máx. 1080p a 60fps) y audio en WAV. Se entrega solo el render final.</li>
+      <li><strong>Derechos de uso:</strong> una vez entregado el trabajo y confirmado el pago, el cliente puede usarlo como quiera. Yo puedo mostrarlo en mi portfolio.</li>
+      <li><strong>Reembolsos:</strong> si el proyecto ya está en desarrollo, se cobra igualmente el precio definido.</li>
+      <li><strong>Más de 3 minutos de video:</strong> el precio se habla aparte.</li>
+      <li><strong>Comprobante:</strong> después de pagar, enviá el comprobante por DM a @lautavfx para confirmar tu pago y arrancar el proyecto.</li>
+    </ul>
+  </div>
+</section>
+    </section>
+
+    <section id="contacto" class="reveal">
+  <h2>Contacto</h2>
+  <p class="section-sub">¿Dudas antes de comprar o querés cotizar algo distinto? Escribime.</p>
+
+  <div class="contact-grid">
+    <form class="contact-form" data-form action="https://formspree.io/f/TU_ID_ACA" method="POST">
+      <label>Nombre
+        <input type="text" name="nombre" required>
+      </label>
+      <label>Email o Instagram
+        <input type="text" name="contacto" required>
+      </label>
+      <label>Servicio de interés
+        <select name="servicio">
+          <option>VFX / edición de video</option>
+          <option>Mezcla</option>
+          <option>Masterización</option>
+          <option>Pack Mix + Master</option>
+          <option>Otro / cotización</option>
+        </select>
+      </label>
+      <label>Mensaje
+        <textarea name="mensaje" rows="5" required></textarea>
+      </label>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+      <button class="btn" type="submit">Enviar mensaje</button>
+      <p class="form-status" role="status"></p>
+    </form>
+
+    <div class="contact-side">
+      <h3>Seguime y escribime</h3>
+      <p>La forma más rápida de hablar conmigo es por Instagram.</p>
+      <a class="social-main" href="https://instagram.com/lautavfx" target="_blank" rel="noopener">
+        <i class="fa-brands fa-instagram"></i> @lautavfx
+      </a>
+      <div class="socials">
+        <a href="https://instagram.com/lautavfx" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer>
+  <div class="socials">
+    <a href="https://instagram.com/lautavfx" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    <a href="#" target="_blank" rel="noopener" aria-label="SoundCloud"><i class="fa-brands fa-soundcloud"></i></a>
+  </div>
+  <p>© 2026 LautaVFX</p>
+</footer>
+
+  <!-- Pop-up (modal) -->
+  <div class="modal" id="modal-reel" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <button class="modal-close" aria-label="Cerrar">&times;</button>
+      <h3>Mi reel</h3>
+      <p>Acá va a ir tu video de YouTube o Vimeo.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-plan" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true">
+    <button class="modal-close" aria-label="Cerrar">&times;</button>
+    <div id="modalPlanContent"></div>
+  </div>
+</div>
+
+  <script src="js/forms.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
